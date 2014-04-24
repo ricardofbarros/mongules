@@ -1,2 +1,2 @@
 // Export lib/mongule
-module.exports = require('./lib/');
+module.exports = require('./lib/mongules');

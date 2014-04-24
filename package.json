@@ -1,7 +1,7 @@
 {
   "name": "mongules",
   "description": "Mongoose DRY model validator",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "homepage": "http://github.com/ricardofbarros/mongules",
   "keywords": [
     "mongules",
@@ -26,10 +26,7 @@
   },
   "dependencies" : {
     "xtend" : "2.1.x",
-    "validator" : "3.5.x"
-  },
-  "devDependencies": {
-    "mocha": "1.18.x"
+    "validator" : "3.10.x"
   },
   "engines": {
     "node": ">= 0.8"
