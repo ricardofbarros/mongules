@@ -28,6 +28,10 @@
     "xtend" : "2.1.x",
     "validator" : "3.10.x"
   },
+  "devDependencies": {
+    "mocha": "1.18.x",
+    "expect.js" : "0.3.x"
+  }, 
   "engines": {
     "node": ">= 0.8"
   }
