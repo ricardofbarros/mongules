@@ -6,7 +6,8 @@ var Schema = mongoose.Schema;
 var mongules = new Mongules();
 
 // Custom validation function
-// User role must be 'admin' or 'user'
+// This rule only belongs
+// to this instance
 mongules.extend('userRole', function(str) {
   return /\b(user)\b|\b(admin)\b/.test(str);
 });
@@ -43,7 +44,6 @@ var userSchema = new Schema({
   },
   role: {
     type: String,
-    required: 'sds',
     validator: [
       {
         rule: 'userRole', // admin or user
@@ -54,6 +54,31 @@ var userSchema = new Schema({
         msg: 'required_role'
       }
     ]
+  },
+  phone : {
+
+    mobile: {
+      type: String,
+      validator: [
+        {
+          rule: 'isMobilePhone',
+          msg: 'invalid_mobile',
+          args: 'pt-PT'
+        }
+      ]
+    },
+
+    house: {
+      type: String,
+      validator: [
+        {
+          rule: 'isTelephone',      // this rule is a "global" rule of mongules
+          msg: 'invalid_telephone', // it was extended in app.js
+          args: 'pt-PT'
+        }
+      ]
+    }
+
   }
 });
 
