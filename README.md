@@ -1,6 +1,8 @@
 mongules
 =====================
 
+[![Join the chat at https://gitter.im/ricardofbarros/mongules](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ricardofbarros/mongules?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [Mongoose](https://github.com/LearnBoost/mongoose) models validations with [node-validator](https://github.com/chriso/validator.js).
 
 It respects the DRY (Don't Repeat Yourself) principle, so you don't need to write a validation function for each field in every model and a message to every validation function.
