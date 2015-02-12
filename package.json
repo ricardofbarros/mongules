@@ -1,7 +1,7 @@
 {
   "name": "mongules",
   "description": "Mongoose DRY model validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "http://github.com/ricardofbarros/mongules",
   "scripts": {
     "test": "./node_modules/.bin/mocha"

@@ -17,14 +17,16 @@ mongules is here to save you from that boring task. yey!
 
 ```javascript
 var mongoose = require('mongoose');
-var mongules = require('mongules');
+var Mongules = require('mongules');
+
+var mongules = new Mongules();
 
 var Schema = mongoose.Schema;
 
-var Test = new Schema({
+var testSchema = new Schema({
   name: {
     type: String,
-    rules : [
+    validator : [
       {
         rule : 'isAlphanumeric',
         msg : 'Only alphanumeric'
@@ -38,10 +40,12 @@ var Test = new Schema({
   }
 });
 
-Test.plugin(mongules.validate);
+testSchema.plugin(mongules.validate);
 
-module.exports = Test;
+module.exports = mongoose.model('Test', testSchema);
 ```
+
+For a more complex example, see the `example` directory.
 
 ## Default validation methods
 
@@ -60,7 +64,7 @@ mongules.extend('userType', function(str) {
 ## Messages Hooks
 This are default messages you can associate to a method, so you don't have to write the same message over and over again.
 
-> **NOTE:** If mongule object has a `msg` key, it overrides the message hook for this method.
+> **NOTE:** If the rule has a `msg` key, it will ignore the message hook.
 
 #### Usage
 
