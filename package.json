@@ -3,6 +3,9 @@
   "description": "Mongoose DRY model validator",
   "version": "1.0.0",
   "homepage": "http://github.com/ricardofbarros/mongules",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
   "keywords": [
     "mongules",
     "validator",
