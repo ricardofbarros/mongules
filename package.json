@@ -28,7 +28,7 @@
     "url": "http://github.com/ricardofbarros/mongules.git"
   },
   "dependencies": {
-    "validator": "^3.29.0",
+    "validator": "^3.30.0",
     "xtend": "^4.0.0"
   },
   "devDependencies": {
