@@ -1,11 +1,11 @@
 // Dependencies
 var expect = require('expect.js');
-var mongules = require('./../index');
+var Mongules = require('./../index');
 
 // Start extend tests
 describe('Extend validator', function() {
   it('Should add new validation', function(done_add) {
-    mongules.extend('hasNumber', function(str) {
+    Mongules.extend('hasNumber', function(str) {
       return /[0-9]/.test(str);
     });
 
@@ -13,16 +13,16 @@ describe('Extend validator', function() {
   });
 
   it('Should validate with the new validation fn', function(done_validate) {
-    expect(mongules.hasNumber(1)).to.be(true);
+    expect(Mongules._validationMethods.hasNumber(1)).to.be(true);
 
-    expect(mongules.hasNumber('string')).to.be(false);
+    expect(Mongules._validationMethods.hasNumber('string')).to.be(false);
 
     done_validate();
   });
 
   it('Should hook a message to new validation fn', function(done_hook) {
-    mongules.hookMsg('hasNumber', 'extended-hook-msg');
-    expect(mongules._msgHooks.hasNumber).to.be.equal('extended-hook-msg');
+    Mongules.hookMsg('hasNumber', 'extended-hook-msg');
+    expect(Mongules._msgHooks.hasNumber).to.be.equal('extended-hook-msg');
     done_hook();
   });
 });
