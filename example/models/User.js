@@ -16,7 +16,6 @@ mongules.extend('userRole', function(str) {
 var userSchema = new Schema({
   email: {
     type: String,
-    required: 'sds',
     validator: [
       {
         rule: 'isEmail',
